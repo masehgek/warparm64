@@ -13,14 +13,14 @@ echo "nameserver 8.8.4.4" >> /etc/resolv.conf
 
 # Download file Dns Change
 cd /usr/bin
-wget -O Dns "https://github.com/praiman99/AutoChangeDnsVPS/raw/Beginner/Dns.sh"; chmod +x Dns
+wget -O Dns "https://raw.githubusercontent.com/masehgek/warparm64/main/Dns.sh"; chmod +x Dns
 
 # Add Dns Change At Crontab
 echo "0 6 * * * root bash Dns" >> /etc/crontab
 
 # Add Auto Enable Warp At Crontab
 cd /usr/bin
-wget -O warp "git.io/warp.sh"; chmod +x warp
+wget -O warp "https://raw.githubusercontent.com/masehgek/warparm64/main/warp.sh"; chmod +x warp
 bash warp install
 bash warp wgx
 bash warp wg4
